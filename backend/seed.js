@@ -5,6 +5,7 @@ const User = require('./models/User');
 const Product = require('./models/Product');
 const connectDB = require('./config/db');
 
+
 dotenv.config();
 
 connectDB();
@@ -28,7 +29,7 @@ const importData = async () => {
       {
         name: 'Wireless Noise-Cancelling Headphones',
         description: 'Immersive sound experience with advanced active noise cancellation.',
-        price: 899.99,
+        price: 899.00,
         category: 'Electronics',
         stock: 15,
         imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',

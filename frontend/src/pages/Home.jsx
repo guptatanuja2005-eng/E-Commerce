@@ -9,9 +9,16 @@ const Home = () => {
     const fetchProducts = async () => {
       try {
         const res = await fetch('/api/products');
-        const data = await res.json();
-        console.log("API DATA:", data);
-        setProducts(data.slice(0, 4)); // Featured products
+      if (!res.ok) {
+    console.error("HTTP Error:", res.status);
+    const text = await res.text();
+    console.error("Response:", text);
+    return;
+  }
+
+    const data = await res.json();
+    console.log("API DATA:", data);
+    setProducts(data.slice(0, 4)); // Featured products
       } catch (error) {
         console.error(error);
       } finally {

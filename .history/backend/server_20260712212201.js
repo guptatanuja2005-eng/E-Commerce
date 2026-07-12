@@ -31,7 +31,7 @@ app.use('/api/analytics', require('./routes/analyticsRoutes'));
 app.get('/', (req, res) => {
   res.json({
     success: true,
-    message: 'ShoppingHub Backend API is running 🚀'
+    message: 'ShopNest Backend API is running 🚀'
   });
 });
 

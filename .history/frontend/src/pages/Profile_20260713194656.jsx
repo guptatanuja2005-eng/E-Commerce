@@ -16,7 +16,7 @@ return;
 
 const fetchMyOrders = async () => {
   try {
-    const res = await fetch('https://e-commerce-41no.onrender.com/api/orders/myorders', {
+    const res = await fetch(, {
       headers: { Authorization: `Bearer ${user.token}` }
     });
 

@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('https://e-commerce-41no.onrender.com/api/products');
+        const res = await fetch('/api/products');
       if (!res.ok) {
     console.error("HTTP Error:", res.status);
     const text = await res.text();

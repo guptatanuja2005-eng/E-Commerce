@@ -13,7 +13,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`https://e-commerce-41no.onrender.com/api/products/${id}`);
+        const res = await fetch();
         const data = await res.json();
         setProduct(data);
       } catch (error) {

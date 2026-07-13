@@ -18,7 +18,7 @@ const Checkout = () => {
 
   const handlePayment = async () => {
     try {
-      const orderRes = await fetch('https://e-commerce-41no.onrender.com', {
+      const orderRes = await fetch(https://e-commerce-41no.onrender.com, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: totalPrice })
@@ -43,13 +43,13 @@ const Checkout = () => {
         description: 'Test Transaction',
         order_id: orderData.id,
         handler: async function (response) {
-          const verifyRes = await fetch('https://e-commerce-41no.onrender.com/api/payment/verify', {
+          const verifyRes = await fetch('/api/payment/verify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(response)
           });
           if (verifyRes.ok) {
-            const saveOrderRes = await fetch('https://e-commerce-41no.onrender.com/api/orders', {
+            const saveOrderRes = await fetch('/api/orders', {
               method: 'POST',
               headers: { 
                 'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const Checkout = () => {
   };
 
   const bypassPayment = async () => {
-    const saveOrderRes = await fetch('https://e-commerce-41no.onrender.com/api/orders', {
+    const saveOrderRes = await fetch('/api/orders', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',

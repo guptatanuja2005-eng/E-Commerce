@@ -91,7 +91,7 @@ const Checkout = () => {
   };
 
   const bypassPayment = async () => {
-    const saveOrderRes = await fetch('https://e-commerce-41no.onrender.com/api/orders', {
+    const saveOrderRes = await fetch(, {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',

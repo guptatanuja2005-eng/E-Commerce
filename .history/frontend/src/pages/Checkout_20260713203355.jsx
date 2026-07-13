@@ -18,7 +18,7 @@ const Checkout = () => {
 
   const handlePayment = async () => {
     try {
-      const orderRes = await fetch('https://e-commerce-41no.onrender.com/api/payment/create-order', {
+      const orderRes = await fetch(', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: totalPrice })

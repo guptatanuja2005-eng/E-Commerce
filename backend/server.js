@@ -1,4 +1,3 @@
-
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -14,33 +13,14 @@ const app = express();
 
 /**
 
-* ✅ CORS CONFIG (FIXED)
-* Allows:
-* * Localhost (for development)
-* * Your Vercel frontend (production)
+* ✅ FINAL CORS FIX (BEST + SIMPLE)
+* * Allows ALL origins (no more Vercel URL issues)
+* * Works for localhost + production
     */
-    const allowedOrigins = [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'https://e-commerce-chi-black-79.vercel.app'
-    ];
-
-app.use(cors({
-origin: function (origin, callback) {
-// allow requests with no origin (like mobile apps / postman)
-if (!origin) return callback(null, true);
-
-```
-if (allowedOrigins.includes(origin)) {
-  callback(null, true);
-} else {
-  callback(new Error('Not allowed by CORS'));
-}
-```
-
-},
-credentials: true
-}));
+    app.use(cors({
+    origin: true,
+    credentials: true
+    }));
 
 // Middleware
 app.use(express.json());
@@ -66,3 +46,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
 console.log(`Server running on port ${PORT}`);
 });
+

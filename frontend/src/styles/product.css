@@ -1,5 +1,36 @@
 /* Hero Banner */
+
 .hero-banner {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.45);
+  background-blend-mode: darken;
+
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+}
+
+/*.hero-banner {
   background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.2), transparent 60%), linear-gradient(135deg, #18181b 0%, #09090b 100%);
   color: white;
   padding: 100px 30px;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 
+
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,11 +32,16 @@ const Home = () => {
   return (
      
     <div className="home-container">
-       <div className="hero-banner"> 
+     <div
+        className="hero-banner"
+        style={{
+          backgroundImage: "url('/bgImage.png')",
+        }}
+      >
         <h1>Welcome to ShoppingHub</h1>
-         <p>Discover the best products at unbeatable prices.</p> 
-         </div>
-
+        <p>Discover the best products at unbeatable prices.</p>
+      </div>
+    
       <h2>Featured Products</h2>
       {loading ? (
         <div>Loading...</div>
